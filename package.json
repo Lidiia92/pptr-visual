@@ -1,0 +1,27 @@
+{
+	"name": "pptr-visual",
+	"version": "1.0.0",
+	"description": "Visual Regression Testing with Puppeteer",
+	"main": "index.js",
+	"scripts": {
+		"test-snapshot": "jest --config=jest.config.js --detectOpenHandles --forceExit",
+		"test-update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit",
+		"test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Lidiia92/pptr-visual.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Lidiia92/pptr-visual/issues"
+	},
+	"homepage": "https://github.com/Lidiia92/pptr-visual#readme",
+	"dependencies": {
+		"jest": "^26.0.1",
+		"jest-image-snapshot": "^4.0.2",
+		"prettier": "^2.0.5",
+		"puppeteer": "^3.3.0"
+	}
+}
