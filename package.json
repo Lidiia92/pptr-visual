@@ -6,7 +6,8 @@
 	"scripts": {
 		"test-snapshot": "jest --config=jest.config.js --detectOpenHandles --forceExit",
 		"test-update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit",
-		"test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
+		"test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests",
+		"test:percy": "set PERCY_TOKEN=d5879d18952e6e9c411e104446b30aa677809be230f878156cf9c1af77aa29e5 && percy exec -- jest ./tests-snapshots/__tests__/percy.test.js"
 	},
 	"repository": {
 		"type": "git",
@@ -19,6 +20,7 @@
 	},
 	"homepage": "https://github.com/Lidiia92/pptr-visual#readme",
 	"dependencies": {
+		"@percy/puppeteer": "^1.1.0",
 		"jest": "^26.0.1",
 		"jest-image-snapshot": "^4.0.2",
 		"prettier": "^2.0.5",
